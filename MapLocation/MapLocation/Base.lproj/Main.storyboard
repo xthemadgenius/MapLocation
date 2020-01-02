@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2YV-5M-rZC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="eKO-qK-FhF">
+            <objects>
+                <viewController id="2YV-5M-rZC" customClass="ViewController" customModule="MapLocation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qaD-1D-T6H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lcT-eJ-xw8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2YV-5M-rZC" id="Yhz-tB-Eoa"/>
+                                </connections>
+                            </mapView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="dVG-P4-q1Z">
+                                <rect key="frame" x="187" y="411" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="CG7-dO-l6n"/>
+                                    <constraint firstAttribute="height" constant="40" id="bQZ-YT-w7U"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PA9-td-dSw">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8qg-Fe-8At"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PA9-td-dSw" firstAttribute="leading" secondItem="DUB-FK-Ek0" secondAttribute="leading" id="3E0-MH-1nJ"/>
+                            <constraint firstItem="dVG-P4-q1Z" firstAttribute="centerX" secondItem="qaD-1D-T6H" secondAttribute="centerX" id="K9p-fo-auk"/>
+                            <constraint firstItem="dVG-P4-q1Z" firstAttribute="centerY" secondItem="qaD-1D-T6H" secondAttribute="centerY" constant="-17" id="Kwe-Rj-hbm"/>
+                            <constraint firstItem="lcT-eJ-xw8" firstAttribute="leading" secondItem="qaD-1D-T6H" secondAttribute="leading" id="Luc-UV-Kmg"/>
+                            <constraint firstItem="DUB-FK-Ek0" firstAttribute="trailing" secondItem="PA9-td-dSw" secondAttribute="trailing" id="Ok6-r7-3ZG"/>
+                            <constraint firstItem="lcT-eJ-xw8" firstAttribute="top" secondItem="qaD-1D-T6H" secondAttribute="top" id="cnL-sx-VNY"/>
+                            <constraint firstAttribute="trailing" secondItem="lcT-eJ-xw8" secondAttribute="trailing" id="m9I-uQ-31O"/>
+                            <constraint firstItem="DUB-FK-Ek0" firstAttribute="bottom" secondItem="lcT-eJ-xw8" secondAttribute="bottom" id="oEY-Hd-5qJ"/>
+                            <constraint firstItem="DUB-FK-Ek0" firstAttribute="bottom" secondItem="PA9-td-dSw" secondAttribute="bottom" id="sOH-6K-e33"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DUB-FK-Ek0"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelLocation" destination="PA9-td-dSw" id="9i6-aX-2Qr"/>
+                        <outlet property="mapView" destination="lcT-eJ-xw8" id="7ZR-Mw-8oj"/>
+                        <outlet property="pinImageVIew" destination="dVG-P4-q1Z" id="ZyP-LZ-x8p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5g-tV-Zkb" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="194" y="139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pin" width="16" height="16"/>
+    </resources>
+</document>
